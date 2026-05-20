@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ALIVE — I Feel So Alive</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg-orbs" aria-hidden="true">
+    <span class="orb orb-1"></span>
+    <span class="orb orb-2"></span>
+    <span class="orb orb-3"></span>
+  </div>
+
+  <header class="nav">
+    <a class="brand" href="#">ALIVE</a>
+    <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+    <nav class="nav-links" id="nav-links">
+      <a href="#roadmap">Roadmap</a>
+      <a href="#how-to-buy">How To Buy</a>
+      <a href="#chart">Live Chart</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <video class="hero-video" autoplay muted loop playsinline preload="auto">
+        <source src="assets/hero.mp4" type="video/mp4" />
+      </video>
+      <div class="hero-overlay" aria-hidden="true"></div>
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="hero-inner">
+        <h1 class="hero-title title-glow">I FEEL SO ALIVE</h1>
+
+        <div class="hero-row">
+          <div class="hero-actions">
+            <a class="btn btn-icon" href="https://x.com" target="_blank" rel="noreferrer" aria-label="Follow on X">
+              <svg class="x-logo-svg" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+            </a>
+
+            <a class="btn btn-buy" id="buy-btn" href="#" target="_blank" rel="noreferrer">
+              <span class="buy-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" focusable="false">
+                  <path d="M3 4h2l2.2 10.2a2 2 0 0 0 2 1.6h7.8a2 2 0 0 0 2-1.5L21 7H7.2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <circle cx="10" cy="19" r="1.6" fill="currentColor"></circle>
+                  <circle cx="17" cy="19" r="1.6" fill="currentColor"></circle>
+                </svg>
+              </span>
+              Buy Now
+            </a>
+          </div>
+
+          <div class="ca-block" role="group" aria-label="Contract address">
+            <span id="ca-text">CA: TBD</span>
+            <button id="copy-ca-btn" type="button">Copy</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="hero-blend" aria-hidden="true"></div>
+
+    <section class="ticker" aria-label="Scrolling tagline">
+      <div class="ticker-track">
+        <div class="ticker-group" aria-hidden="true">
+          <span>I FEEL SO ALIVE</span><i></i><span>PURPLE NEON</span><i></i><span>STAY VIBRANT</span><i></i><span>I FEEL SO ALIVE</span><i></i><span>PURPLE NEON</span><i></i><span>STAY VIBRANT</span><i></i>
+        </div>
+        <div class="ticker-group" aria-hidden="true">
+          <span>I FEEL SO ALIVE</span><i></i><span>PURPLE NEON</span><i></i><span>STAY VIBRANT</span><i></i><span>I FEEL SO ALIVE</span><i></i><span>PURPLE NEON</span><i></i><span>STAY VIBRANT</span><i></i>
+        </div>
+        <div class="ticker-group" aria-hidden="true">
+          <span>I FEEL SO ALIVE</span><i></i><span>PURPLE NEON</span><i></i><span>STAY VIBRANT</span><i></i><span>I FEEL SO ALIVE</span><i></i><span>PURPLE NEON</span><i></i><span>STAY VIBRANT</span><i></i>
+        </div>
+      </div>
+    </section>
+
+    <section class="section roadmap" id="roadmap">
+      <div class="section-head">
+        <h2>Roadmap</h2>
+      </div>
+
+      <div class="timeline">
+        <article class="timeline-item">
+          <div class="timeline-node" aria-hidden="true"><span>01</span></div>
+          <div class="timeline-body">
+            <span class="timeline-phase">Phase I</span>
+            <h3 class="timeline-title">The Birth</h3>
+            <p>Where it all starts — launch day, first posts, first eyes on ALIVE.</p>
+            <ul class="timeline-points">
+              <li>Initial launch</li>
+              <li>Content posting on X</li>
+              <li>Community discovery</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="timeline-item">
+          <div class="timeline-node" aria-hidden="true"><span>02</span></div>
+          <div class="timeline-body">
+            <span class="timeline-phase">Phase II</span>
+            <h3 class="timeline-title">The Awakening</h3>
+            <p>The world starts noticing — new platforms, new faces, new energy.</p>
+            <ul class="timeline-points">
+              <li>TikTok push</li>
+              <li>Collaborations</li>
+              <li>Chart attention and volume waves</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="timeline-item">
+          <div class="timeline-node" aria-hidden="true"><span>03</span></div>
+          <div class="timeline-body">
+            <span class="timeline-phase">Phase III</span>
+            <h3 class="timeline-title">The Rise</h3>
+            <p>ALIVE stops being a secret. Listings, partnerships, and sustained narrative keep the fire burning.</p>
+            <ul class="timeline-points">
+              <li>Expanded reach and holder rewards</li>
+              <li>Strategic partnerships</li>
+              <li>Ecosystem utilities and surprises</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="timeline-item timeline-item-finale">
+          <div class="timeline-node timeline-node-finale" aria-hidden="true"><span>04</span></div>
+          <div class="timeline-body">
+            <span class="timeline-phase">Phase IV</span>
+            <h3 class="timeline-title timeline-title-glow">The Takeover</h3>
+            <p>We made it. Charts, feeds, and wallets — everyone’s feeling alive.</p>
+            <ul class="timeline-points">
+              <li>Market-wide recognition</li>
+              <li>We become millionaires</li>
+              <li>Legacy phase — still climbing</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section how-to-buy" id="how-to-buy">
+      <div class="section-head">
+        <h2>How To Buy</h2>
+      </div>
+
+      <div class="steps">
+        <article class="card step-card">
+          <span class="step-label">Step 01</span>
+          <h3>Create a Phantom Wallet</h3>
+          <p>Download Phantom and set up your wallet securely.</p>
+        </article>
+        <article class="card step-card">
+          <span class="step-label">Step 02</span>
+          <h3>Buy SOL</h3>
+          <p>Purchase SOL on your exchange and send it to Phantom.</p>
+        </article>
+        <article class="card step-card">
+          <span class="step-label">Step 03</span>
+          <h3>Open pump.fun</h3>
+          <p>Go to pump.fun and search for the official ALIVE listing.</p>
+        </article>
+        <article class="card step-card">
+          <span class="step-label">Step 04</span>
+          <h3>Swap SOL for ALIVE</h3>
+          <p>Confirm the pair, swap your SOL, and hold with conviction.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section chart" id="chart">
+      <div class="section-head">
+        <h2>Live Chart</h2>
+      </div>
+      <div class="card chart-card">
+        <div id="dexscreener-widget"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-logos" aria-label="Social links">
+      <a class="footer-logo x-logo" href="https://x.com" target="_blank" rel="noreferrer" aria-label="X profile">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+        </svg>
+      </a>
+      <a class="footer-logo pump-logo" href="https://pump.fun" target="_blank" rel="noreferrer" aria-label="pump.fun">
+        <img src="https://pump.fun/logo.png" alt="pump.fun logo" />
+      </a>
+    </div>
+    <p>ALIVE © <span id="year"></span> — Built to feel electric.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
