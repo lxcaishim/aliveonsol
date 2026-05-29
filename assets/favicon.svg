@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="ALIVE">
+  <defs>
+    <linearGradient id="alive-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7b2fff"/>
+      <stop offset="100%" stop-color="#ff2fd6"/>
+    </linearGradient>
+  </defs>
+  <rect width="32" height="32" rx="7" fill="#12001f"/>
+  <path fill="url(#alive-gradient)" d="M16 4 26 28h-3.4l-2-5.2H11.4L9.4 28H6L16 4Zm0 8.2-3.4 8.8h6.8L16 12.2Z"/>
+</svg>
