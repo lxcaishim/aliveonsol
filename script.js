@@ -1,5 +1,8 @@
-// Set your Solana mint here when ready — Dexscreener + Buy button wire up automatically.
-const TOKEN_MINT = "";
+const TOKEN_MINT = "3DMPPxfZYfKAbcrjs2TCy9hoA1iYf38n2f4ZavB4pump";
+const X_PROFILE_URL = "https://x.com/ifeelsoalivesol?s=21";
+const PUMP_FUN_URL = `https://pump.fun/coin/${TOKEN_MINT}`;
+const DEXSCREENER_URL = `https://dexscreener.com/solana/${TOKEN_MINT}`;
+const SOLSCAN_URL = `https://solscan.io/token/${TOKEN_MINT}`;
 
 document.getElementById("year").textContent = new Date().getFullYear();
 
@@ -7,9 +10,27 @@ const caText = document.getElementById("ca-text");
 const copyCaBtn = document.getElementById("copy-ca-btn");
 const buyBtn = document.getElementById("buy-btn");
 
+document.querySelectorAll(".x-profile-link").forEach((link) => {
+  link.href = X_PROFILE_URL;
+});
+
+document.querySelectorAll(".pump-coin-link").forEach((link) => {
+  link.href = PUMP_FUN_URL;
+});
+
+document.querySelectorAll(".dexscreener-link").forEach((link) => {
+  link.href = DEXSCREENER_URL;
+});
+
+const caInlineLink = document.getElementById("ca-inline-link");
+if (caInlineLink) {
+  caInlineLink.href = SOLSCAN_URL;
+}
+
 if (TOKEN_MINT.trim().length > 0) {
-  caText.textContent = `CA: ${TOKEN_MINT}`;
-  buyBtn.href = `https://pump.fun/coin/${TOKEN_MINT}`;
+  caText.innerHTML = `CA: <a class="ca-link" href="${SOLSCAN_URL}" target="_blank" rel="noreferrer">${TOKEN_MINT}</a>`;
+  buyBtn.href = PUMP_FUN_URL;
+  buyBtn.removeAttribute("aria-disabled");
 } else {
   caText.textContent = "CA: TBD";
   buyBtn.href = "https://pump.fun";

@@ -332,6 +332,18 @@ main { position: relative; z-index: 2; }
   letter-spacing: 0.03em;
   color: var(--neon);
   white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#ca-text .ca-link {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+#ca-text .ca-link:hover {
+  color: var(--text);
 }
 
 #copy-ca-btn {
@@ -666,6 +678,33 @@ main { position: relative; z-index: 2; }
   margin: 0.5rem 0 0.35rem;
   font-size: 1.02rem;
   color: var(--neon);
+}
+
+.step-card h3 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.step-card h3 a:hover {
+  color: var(--text);
+  text-decoration: underline;
+}
+
+.step-card p a,
+.step-card p .ca-inline-link {
+  color: var(--neon);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.step-card p a:hover,
+.step-card p .ca-inline-link:hover {
+  color: var(--text);
+}
+
+.step-card p code.ca-inline {
+  font-size: 0.78rem;
+  word-break: break-all;
 }
 
 .step-card p {
