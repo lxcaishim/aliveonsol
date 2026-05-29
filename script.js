@@ -60,6 +60,23 @@ navLinks.querySelectorAll('a[href^="#"]').forEach((link) => {
   });
 });
 
+async function copyToClipboard(text) {
+  if (navigator.clipboard?.writeText) {
+    await navigator.clipboard.writeText(text);
+    return;
+  }
+  const helper = document.createElement("textarea");
+  helper.value = text;
+  helper.setAttribute("readonly", "");
+  helper.style.position = "fixed";
+  helper.style.left = "-9999px";
+  document.body.appendChild(helper);
+  helper.select();
+  const ok = document.execCommand("copy");
+  document.body.removeChild(helper);
+  if (!ok) throw new Error("copy failed");
+}
+
 copyCaBtn.addEventListener("click", async () => {
   if (!TOKEN_MINT.trim()) {
     copyCaBtn.textContent = "TBD";
@@ -67,7 +84,7 @@ copyCaBtn.addEventListener("click", async () => {
     return;
   }
   try {
-    await navigator.clipboard.writeText(TOKEN_MINT);
+    await copyToClipboard(TOKEN_MINT);
     copyCaBtn.textContent = "Copied";
     setTimeout(() => { copyCaBtn.textContent = "Copy"; }, 1200);
   } catch (_error) {
